@@ -31,5 +31,5 @@ while true do
  fi;
 ## waits 60 min randomly
  sleep $(((RANDOM % 60) + 1));
-done;
+done; ## getting syntax error!?
 ## notifies network users -> TODO
