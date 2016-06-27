@@ -9,7 +9,7 @@ getIP() {
 ## waits response for 30 secs
   IP=`curl --max-time 30 ${findersArray[i]}`;
   ((i=(i+1) % ${#findersArray[@]}));
- done
+done;
 ## updates log with last valid source
  echo "**last update from ${findersArray[i]}**" >> logIP_change.txt;
 ## TODO update sources
@@ -18,10 +18,10 @@ getIP() {
 getIP
 pubIP=$IP;
 ## infinite loop, keeps looking for changes in external ip
-while true do
- getIP
+while true; do
+getIP
 ##checks if public IP has changed
- if [ $IP -eq $pubIP ]
+ if [ $IP -eq $pubIP ];
  then
   echo "everything OK :" `date` && echo "["`date`"]: $pubIP" >> logIP_change.txt;
  else
@@ -31,5 +31,5 @@ while true do
  fi;
 ## waits 60 min randomly
  sleep $(((RANDOM % 60) + 1));
-done; ## getting syntax error!?
+done;
 ## notifies network users -> TODO
