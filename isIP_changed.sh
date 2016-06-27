@@ -21,7 +21,7 @@ pubIP=$IP;
 while true; do
 getIP
 ##checks if public IP has changed
- if [ $IP -eq $pubIP ];
+ if [ "$IP" = "$pubIP" ];
  then
   echo "everything OK :" `date` && echo "["`date`"]: $pubIP" >> logIP_change.txt;
  else
