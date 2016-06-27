@@ -30,6 +30,6 @@ getIP
  pubIP=$IP;
  fi;
 ## waits 60 min randomly
- sleep $(((RANDOM % 60) + 1));
+ sleep $(((RANDOM % 60) + 1))m;
 done;
 ## notifies network users -> TODO
