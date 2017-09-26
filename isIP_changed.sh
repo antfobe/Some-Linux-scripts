@@ -29,7 +29,7 @@ getIP
 ## updates change
  pubIP=$IP;
  fi;
-## waits 60 min randomly
+## waits 30min mean randomly
  sleep $(((RANDOM % 60) + 1))m;
 done;
 ## notifies network users -> TODO
